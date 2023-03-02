@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --linha-completa: #e6bb00;
+    --pl1-preto: #222831;
+    --pl1-cinza: #393E46;
+    --pl1-turq: #00ADB5;
+    --pl1-gelo: #EEEEEE;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--pl1-preto);
+    font-family: 'Mulish', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+h1 {
+    color: var(--pl1-gelo);
+    margin-bottom: 45px;
+}
+
+.fa-linkedin {
+    font-size: 1.8rem;
+    color: #0e76a8;
+}
+
+.fa-github {
+    font-size: 1.8rem;
+    color: #171515;
+}
+
+.fa-whatsapp {
+    font-size: 1.8rem;
+    color: #075E54;
+}
+
+.fa-youtube {
+    font-size: 1.8rem;
+    color: #FF0000;
+}
+
+.container {
+    text-align: center;
+}
+
+.progresso-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin: 30px;
+    max-width: 100%;
+    width: 350px;
+}
+
+.progresso-container::before {
+    content: "";
+    background-color: var(--pl1-gelo);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 100%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.progresso {
+    background-color: var(--linha-completa);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    height: 4px;
+    width: 0%;
+    z-index: -1;
+    transition: 0.4s ease;
+}
+
+.circulos {
+    background-color: #fff;
+    color: #999;
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    border: 3px solid var(--pl1-gelo);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.4s ease;
+}
+
+.circulos.ativo {
+    border-color: var(--linha-completa);
+}
+
+.btn {
+    background-color: var(--linha-completa);
+    color: var(--pl1-preto);
+    border-radius: 6px;
+    border: 0;
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 600;
+    padding: 8px 15px;
+    margin: 5px;
+    font-size: 0.975rem;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:active {
+    transform: scale(0.97);
+}
+
+.btn:disabled {
+    background-color: var(--pl1-gelo);
+    cursor: not-allowed;
+}
+
+
+

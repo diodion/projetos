@@ -1,11 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;500;600&display=swap');
-@import url('/cor.css');
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+:root {
+    --pl1-preto: #222831;
+    --pl1-cinza: #393E46;
+    --pl1-turq: #00ADB5;
+    --pl1-gelo: #EEEEEE;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Mulish', sans-serif;
 }
 
 body {
@@ -29,7 +35,7 @@ header {
 
 header h1 {
     color: var(--pl1-gelo);
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .wrapper {

@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500&display=swap');
+
+:root {
+    --pl1-preto: #222831;
+    --pl1-cinza: #393E46;
+    --pl1-turq: #00ADB5;
+    --pl1-gelo: #EEEEEE;
+}
+
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--pl1-preto);
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(120deg, #222831, #393E46);
+    height: 100vh;
+    overflow: hidden;
+}
+
+.boxform {
+    position: absolute;
+    top:  50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: var(--pl1-gelo);
+    border-radius: 10px;
+}
+
+.boxform h1 {
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid white;
+}
+
+.boxform form {
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .input_field {
+    position: relative;
+    border-bottom: 2px solid grey;
+    margin: 30px 0;
+}
+
+.input_field input {
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 1rem;
+    border: none;
+    background: none;
+    outline: none;
+}
+
+.input_field label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    color: grey;
+    transform: translateY(-50%);
+    transition: .5s;
+    font-size: 1rem;
+    pointer-events: none;
+}
+
+.input_field span::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--pl1-turq);
+    transition: .5s;
+}
+
+.input_field input:focus ~ label,
+.input_field input:valid ~ label {
+    top: -5px;
+    color: var(--pl1-turq);
+}
+
+.input_field input:focus ~ span::before,
+.input_field input:valid ~ span::before {
+    width: 100%;
+}
+
+.esqueceu_senha {
+    margin: -5px 0 20px 5px;
+}
+
+.esqueceu_senha a {
+    color: grey;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.esqueceu_senha a:hover {
+    color: var(--pl1-turq);
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: 1px solid;
+    background: var(--pl1-turq);
+    font-size: 18px;
+    color: var(--pl1-gelo);
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+}
+
+input[type="submit"]:hover{
+    border-color: var(--pl1-turq);
+    transition: .5s;
+}
+
+.registrar_link {
+    margin: 30px 0;
+    text-align: center;
+    font-size: 1rem;
+    color: var(--pl1-cinza);
+}
+
+.registrar_link a {
+    color: var(--pl1-cinza);
+    text-decoration: none;
+}
+
+.registrar_link a:hover {
+    color: var(--pl1-turq);
+}
